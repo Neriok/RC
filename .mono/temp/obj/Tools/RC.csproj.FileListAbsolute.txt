@@ -1,5 +1,0 @@
-C:\Users\Leo\Projects\RC\Program\RC\.mono\temp\bin\Tools\RC.dll
-C:\Users\Leo\Projects\RC\Program\RC\.mono\temp\bin\Tools\RC.pdb
-C:\Users\Leo\Projects\RC\Program\RC\.mono\temp\obj\Tools\RC.csprojResolveAssemblyReference.cache
-C:\Users\Leo\Projects\RC\Program\RC\.mono\temp\obj\Tools\RC.dll
-C:\Users\Leo\Projects\RC\Program\RC\.mono\temp\obj\Tools\RC.pdb
