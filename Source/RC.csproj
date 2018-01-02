@@ -38,12 +38,6 @@
     <ConsolePause>false</ConsolePause>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\Libraries\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
-    </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <HintPath>..\Libraries\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
-    </Reference>
     <Reference Include="GodotSharp">
       <HintPath>$(SolutionDir)\.mono\assemblies\GodotSharp.dll</HintPath>
       <Private>False</Private>
@@ -51,42 +45,31 @@
     <Reference Include="GodotSharpEditor">
       <HintPath>..\.mono\assemblies\GodotSharpEditor.dll</HintPath>
     </Reference>
+    <Reference Include="Mono.Data.Sqlite">
+      <HintPath>..\Libraries\Mono.Sqlite.3\Mono.Data.Sqlite.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\Database\InsertCommand.cs" />
+    <Compile Include="Data\Database\RcDatabase.cs" />
+    <Compile Include="Data\Database\SimpleCommand.cs" />
+    <Compile Include="Data\Database\UpdateCommand.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Data\Category.cs" />
     <Compile Include="Data\DbObject.cs" />
     <Compile Include="Data\Question.cs" />
     <Compile Include="Data\Team.cs" />
     <Compile Include="Data\Tournament.cs" />
-    <Compile Include="Repository\ICategoryRepository.cs" />
-    <Compile Include="Repository\IQuestionRepository.cs" />
-    <Compile Include="Repository\IRcDatabase.cs" />
-    <Compile Include="Repository\IRepository.cs" />
-    <Compile Include="Repository\ITeamRepository.cs" />
-    <Compile Include="Repository\ITournamentRepository.cs" />
-    <Compile Include="Repository\Sqlite\InsertCommand.cs" />
-    <Compile Include="Repository\Sqlite\SimpleCommand.cs" />
-    <Compile Include="Repository\Sqlite\SqliteContext.cs" />
-    <Compile Include="Repository\Sqlite\SqliteDatabase.cs" />
-    <Compile Include="Repository\Sqlite\UpdateCommand.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Application\Config\" />
     <Folder Include="Application\Editor\" />
-    <Folder Include="Application\Game\" />
-    <Folder Include="Application\Log\" />
+    <Folder Include="Application\Game\History\" />
     <Folder Include="Application\UI\Navigation\" />
-    <Folder Include="Service\" />
-    <Folder Include="Util\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\app.config" />
-    <None Include="..\packages.config" />
+    <Folder Include="Config\" />
+    <Folder Include="Utilies\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
