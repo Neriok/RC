@@ -31,7 +31,6 @@ namespace RC.Data.Database
         /// <summary>
 		/// Runs SqliteCommand.ExecuteNonQuery
 		/// </summary>
-		/// <returns></returns>
 		public override int Execute()
         {
             // Build setting part
