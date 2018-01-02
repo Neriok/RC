@@ -5,8 +5,8 @@ using System.Collections.Generic;
 namespace RC.Data.Database
 {
     /// <summary>
-	/// Base class for simplified SQLite commands.
-	/// </summary>
+    /// Base class for simplified SQLite commands.	
+    /// </summary>
     public abstract class SimpleCommand : IDisposable
     {
         // --------------------------------------------------
@@ -34,17 +34,17 @@ namespace RC.Data.Database
         // --------------------------------------------------
 
         /// <summary>
-		/// Adds a parameter that's not handled by Set.
-		/// </summary>
+	/// Adds a parameter that's not handled by Set.
+	/// </summary>
         public void AddParameter(String name, Object value)
         {
             _command.Parameters.AddWithValue(name, value);
         }
 
         /// <summary>
-		/// Sets value for field.
-		/// </summary>
-		public void Set(String field, Object value)
+	/// Sets value for field.
+	/// </summary>
+	public void Set(String field, Object value)
         {
             _set[field] = value;
         }
