@@ -69,7 +69,7 @@
     <Folder Include="Application\Game\History\" />
     <Folder Include="Application\UI\Navigation\" />
     <Folder Include="Config\" />
-    <Folder Include="Utilies\" />
+    <Folder Include="Utilities\" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 </Project>
