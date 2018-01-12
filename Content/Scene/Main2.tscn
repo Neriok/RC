@@ -1,4 +1,6 @@
-[gd_scene format=2]
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Content/Script/Application/Test.cs" type="Script" id=1]
 
 [node name="Control" type="Control"]
 
@@ -13,5 +15,6 @@ rect_clip_content = false
 mouse_filter = 0
 size_flags_horizontal = 1
 size_flags_vertical = 1
+script = ExtResource( 1 )
 
 

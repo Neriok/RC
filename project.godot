@@ -12,6 +12,7 @@ config_version=3
 
 config/name="RC"
 run/main_scene="res://Content/Scene/Main2.tscn"
+boot_splash/image="res://Content/Image/2fd14a5b30468459812081111083710a.png"
 
 [gdnative]
 

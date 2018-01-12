@@ -1,6 +1,6 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RC", "Source\RC.csproj", "{B544458C-ADAF-43A6-ABF4-060327CB55FB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RC", "RC.csproj", "{89DC066D-3AB6-4978-8759-6A51CBCE62F2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,11 +9,11 @@ Global
 	Tools|Any CPU = Tools|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B544458C-ADAF-43A6-ABF4-060327CB55FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B544458C-ADAF-43A6-ABF4-060327CB55FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B544458C-ADAF-43A6-ABF4-060327CB55FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B544458C-ADAF-43A6-ABF4-060327CB55FB}.Release|Any CPU.Build.0 = Release|Any CPU
-		{B544458C-ADAF-43A6-ABF4-060327CB55FB}.Tools|Any CPU.ActiveCfg = Tools|Any CPU
-		{B544458C-ADAF-43A6-ABF4-060327CB55FB}.Tools|Any CPU.Build.0 = Tools|Any CPU
+		{89DC066D-3AB6-4978-8759-6A51CBCE62F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89DC066D-3AB6-4978-8759-6A51CBCE62F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89DC066D-3AB6-4978-8759-6A51CBCE62F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89DC066D-3AB6-4978-8759-6A51CBCE62F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89DC066D-3AB6-4978-8759-6A51CBCE62F2}.Tools|Any CPU.ActiveCfg = Tools|Any CPU
+		{89DC066D-3AB6-4978-8759-6A51CBCE62F2}.Tools|Any CPU.Build.0 = Tools|Any CPU
 	EndGlobalSection
 EndGlobal

@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Test.cs" type="Script" id=1]
+[ext_resource path="res://Content/Script/Application/Test.cs" type="Script" id=1]
 
 [node name="Control" type="Control"]
 
@@ -17,5 +17,7 @@ size_flags_horizontal = 1
 size_flags_vertical = 1
 script = ExtResource( 1 )
 _sections_unfolded = [ "Pause" ]
+
+[connection signal="tree_exited" from="." to="." method="_on_Control_tree_exited"]
 
 

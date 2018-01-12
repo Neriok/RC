@@ -1,0 +1,12 @@
+C:\Users\Leo\Projects\RC\Program\RC\.mono\temp\bin\Tools\RC.dll
+C:\Users\Leo\Projects\RC\Program\RC\.mono\temp\bin\Tools\RC.pdb
+C:\Users\Leo\Projects\RC\Program\RC\.mono\temp\obj\Tools\RC.csprojResolveAssemblyReference.cache
+C:\Users\Leo\Projects\RC\Program\RC\.mono\temp\obj\Tools\RC.dll
+C:\Users\Leo\Projects\RC\Program\RC\.mono\temp\obj\Tools\RC.pdb
+C:\Users\Leo\Projects\RC\Program\RC\.mono\temp\bin\Tools\GodotSharpEditor.dll
+C:\Users\Leo\Projects\RC\Program\RC\.mono\temp\bin\Tools\Mono.Data.Sqlite.dll
+C:\Users\Leo\Projects\RC\Program\RC\.mono\temp\bin\Tools\System.Numerics.dll
+C:\Users\Leo\Projects\RC\Program\RC\.mono\temp\bin\Tools\Mono.Data.Tds.dll
+C:\Users\Leo\Projects\RC\Program\RC\.mono\temp\bin\Tools\System.EnterpriseServices.dll
+C:\Users\Leo\Projects\RC\Program\RC\.mono\temp\bin\Tools\GodotSharpEditor.pdb
+C:\Users\Leo\Projects\RC\Program\RC\.mono\temp\bin\Tools\GodotSharpEditor.xml
