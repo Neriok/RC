@@ -1,1 +1,12 @@
 
+# Godot builds & assamblies 
+
+.import
+.mono
+[Mm]ono
+
+# Visual Studio folders
+
+.vs 
+[Bb]uild
+[Rr]elease
