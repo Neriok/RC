@@ -1,6 +1,7 @@
 ﻿using Godot;
-using Rc.Data;
+using Rc.Data.Model;
 using Rc.Data.Database;
+using Rc.Application.Game.Section;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,8 +15,12 @@ namespace Rc.Application
         // --------------------------------------------------
         // Fields
         // --------------------------------------------------
-        
-        private static Node _mainNode; 
+
+        //private static SceneHandler _sceneHandler;
+        private static Node _mainNode;
+
+        private static Godot.Object _game;
+        private static Godot.Object _editor;
 
         private static Boolean _isRunningApplication;
         private static Boolean _isRunningGame;
@@ -95,12 +100,19 @@ namespace Rc.Application
             // Instance SceneLoader
 
             // Setup system message handler (popup)
-            
+
             // ...
 
             // Initialize and test database}
 
-            // ...
+            Question q = new Question();
+            q.Caption = "NADIE PASA DE ESTA ESQUINA, AQUI MANDAN LAS DIVINAS";
+
+            QuestionInitializer qi = new QuestionInitializer(q, ResourceLoader.Load("res://Content/Scene/Node2D.tscn") as PackedScene);
+            
+
+            MainNode.AddChild(qi.InitNode());
+
         }
 
         public static void RunGame()
@@ -133,6 +145,11 @@ namespace Rc.Application
         private static Boolean InitDatabase(RcDatabase database)
         {
             return true;
+        }
+
+        public static void Reset()
+        {
+
         }
 
         public static void QuitRequest()

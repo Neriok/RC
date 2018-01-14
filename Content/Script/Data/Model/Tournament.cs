@@ -1,13 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Rc.Data
+namespace Rc.Data.Model
 {
     /// <summary>
     /// Represents a tournament data object at runtime. 
     /// </summary>
     public class Tournament : DbObject, IEquatable<Tournament>
     {
+        // --------------------------------------------------
+        // Fields
+        // --------------------------------------------------
+
+        public static readonly Tournament Empty = new Tournament();
+
         // --------------------------------------------------
         // Properties
         // --------------------------------------------------
@@ -36,6 +42,15 @@ namespace Rc.Data
         /// Gets or sets the torunament's categories.
         /// </summary>
         public List<Category> Categories { get; set; }
+
+        // --------------------------------------------------
+        // Methods
+        // --------------------------------------------------
+
+        public Boolean IsEmpty()
+        {
+            return this.Equals(Tournament.Empty);
+        }
 
         // --------------------------------------------------
         // IEquatable <Tournament>

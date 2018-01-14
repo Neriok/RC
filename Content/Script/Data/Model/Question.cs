@@ -1,12 +1,39 @@
 ﻿using System;
 
-namespace Rc.Data
+namespace Rc.Data.Model
 {
+    /// <summary>
+    /// Represents question's types. 
+    /// </summary>
+    public enum QuestionType
+    {
+        Normal = 0,
+        Image = 1,
+        Video = 2,
+    }
+
+    /// <summary>
+    /// Enumaration of the four possible answers.
+    /// </summary>
+    public enum CorrectAnswer
+    {
+        A = 0,
+        B = 1,
+        C = 2,
+        D = 3
+    }
+
     /// <summary>
     /// Represents a question data object at runtime. 
     /// </summary>
     public class Question : DbObject, IEquatable<Question>, ICloneable
     {
+        // --------------------------------------------------
+        // Fields
+        // --------------------------------------------------
+
+        public static readonly Question Empty = new Question();
+
         // --------------------------------------------------
         // Properties
         // --------------------------------------------------
@@ -52,10 +79,24 @@ namespace Rc.Data
         public CorrectAnswer CorrectAnswer { get; set; }
 
         /// <summary>
-        /// Gets or sets the teaching of the question.
+        /// Gets or sets the learning of the question.
         /// </summary>
-        public String Teaching { get; set; }
-        
+        public String Learning { get; set; }
+
+        // --------------------------------------------------
+        // Methods
+        // --------------------------------------------------
+
+        public Boolean IsEmpty()
+        {
+            return this.Equals(Question.Empty);
+        }
+
+        public Boolean IsValid()
+        {
+            return false;
+        }
+
         // --------------------------------------------------
         // IEquatable <Question>
         // --------------------------------------------------
@@ -72,7 +113,7 @@ namespace Rc.Data
                 this.AnswerC == other.AnswerC &&
                 this.AnswerD == other.AnswerD &&
                 this.CorrectAnswer == other.CorrectAnswer &&
-                this.Teaching == other.Teaching;
+                this.Learning == other.Learning;
         }
 
         // --------------------------------------------------
@@ -84,25 +125,5 @@ namespace Rc.Data
             return (Question)MemberwiseClone();
         }
     }
-
-    /// <summary>
-    /// Represents question's types. 
-    /// </summary>
-    public enum QuestionType
-    {
-        Normal = 0,
-        Image = 1,
-        Video = 2,
-    }
-
-    /// <summary>
-    /// Enumaration of the four possible answers.
-    /// </summary>
-    public enum CorrectAnswer
-    {        
-        A = 0,
-        B = 1,
-        C = 2,
-        D = 3
-    }
+  
 }

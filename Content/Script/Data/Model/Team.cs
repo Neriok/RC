@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Rc.Data
+namespace Rc.Data.Model
 {
     /// <summary>
     /// Represents a team data object at runtime. 

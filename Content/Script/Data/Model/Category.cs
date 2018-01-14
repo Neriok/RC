@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Drawing;
 
-namespace Rc.Data
+namespace Rc.Data.Model
 {
     /// <summary>
     /// Represents a category data object at runtime. 

@@ -58,7 +58,7 @@ namespace Rc.Data.Database
 
             // Add values part
             String values = "(" + (sb1.ToString().Trim(' ', ',')) + ") VALUES (" + (sb2.ToString().Trim(' ', ',')) + ")";
-            _command.CommandText = string.Format(_command.CommandText, values);
+            _command.CommandText = String.Format(_command.CommandText, values);
 
             // Add parameters
             foreach (KeyValuePair<String, Object> parameter in _set)
