@@ -7,44 +7,24 @@ using System.Threading.Tasks;
 
 namespace Rc.Application
 {
-    public class MainScene : Node, IControllableScene
+    public class MainScene : Node
     {
         // --------------------------------------------------
-        // Fields
-        // --------------------------------------------------
-
-        internal SceneController _controller;
-
-        // --------------------------------------------------
-        // Node2D
+        // Methods
         // --------------------------------------------------
 
         public override void _Ready()
         {
-            //_controller = new MainSceneController(this);
-            //((MainSceneController)_controller).Main();
-        }
+            Application.Run(this);
+        }        
 
         public override void _Notification(int what)
         {
-            //((MainSceneController)_controller).Notification(what);
-        }
-
-        // --------------------------------------------------
-        // IControllableScene
-        // --------------------------------------------------
-
-        public SceneController SceneController
-        {
-            get { return _controller; }
-        }
-		
-		
-		private void _on_Button_button_down()
-		{
-		    Application.Reset();
-		}
-
+            if(what == MainLoop.NOTIFICATION_WM_QUIT_REQUEST)
+            {
+                Application.QuitRequest();
+            }
+        }       
     }
 }
 

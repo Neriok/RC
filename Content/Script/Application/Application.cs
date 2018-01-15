@@ -62,7 +62,7 @@ namespace Rc.Application
         // --------------------------------------------------
 
         /// <summary>
-        /// Runs application with an initial node.
+        /// Runs application with an initial main scene.
         /// </summary>
         public static void Run(MainScene mainScene)
         {
@@ -71,15 +71,14 @@ namespace Rc.Application
             {
                 // ERROR
                 return;
-            }
-                      
+            }                      
 
             _isRunningApplication = true;
 
             // Apply changes to SceneTree
 
             _mainScene = mainScene;
-            MainScene.GetTree().SetAutoAcceptQuit(false); // Allows handle quit requests
+            _mainScene.GetTree().SetAutoAcceptQuit(false); // Allows handle quit requests
 
             // Instance SceneLoader
 
@@ -87,10 +86,7 @@ namespace Rc.Application
 
             // ...
 
-            // Initialize and test database}
-
-
-            GD.print("Iniciando escena principal!");
+            // Initialize and test database            
         }
                 
         public static void RunGame()
@@ -139,24 +135,6 @@ namespace Rc.Application
                 // Verify editor state
 
             }
-
-           
-            Viewport root = MainScene.GetTree().GetRoot();
-            GD.print(root.GetName());
-
-            // Load new main scene.
-            PackedScene ps = (PackedScene)ResourceLoader.Load("res://Content/Scene/Main.tscn") ;
-            Node n = ps.Instance();
-
-
-            _isRunningApplication = false;
-            root.AddChild(n);
-
-            GD.print(root.GetChildCount());
-           
-
-            // Init main script again.
-            //root.AddChild(newMainScene);
         }
 
         public static void QuitRequest()
@@ -179,7 +157,7 @@ namespace Rc.Application
                 //    return;
             }
          
-            MainScene.GetTree().Quit();
+            _mainScene.GetTree().Quit();
         }
 
     }
