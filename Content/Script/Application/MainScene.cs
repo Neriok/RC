@@ -1,21 +1,19 @@
-﻿using Godot;
+using Godot;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Runtime.CompilerServices;
 
-[assembly: InternalsVisibleTo("QuestionSceneController")]
-namespace Rc.Application.Game
+namespace Rc.Application
 {
-    public class QuestionScene : Node2D, IControllableScene
+    public class MainScene : Node, IControllableScene
     {
         // --------------------------------------------------
         // Fields
         // --------------------------------------------------
 
-        internal SceneController _controller;     
+        internal SceneController _controller;
 
         // --------------------------------------------------
         // Node2D
@@ -23,24 +21,31 @@ namespace Rc.Application.Game
 
         public override void _Ready()
         {
-            
+            //_controller = new MainSceneController(this);
+            //((MainSceneController)_controller).Main();
+        }
+
+        public override void _Notification(int what)
+        {
+            //((MainSceneController)_controller).Notification(what);
         }
 
         // --------------------------------------------------
-        // ISceneNode
+        // IControllableScene
         // --------------------------------------------------
 
         public SceneController SceneController
         {
-            get
-            {
-                return _controller;
-            }
+            get { return _controller; }
         }
+		
+		
+		private void _on_Button_button_down()
+		{
+		    Application.Reset();
+		}
 
     }
 }
-
-
 
 

@@ -1,7 +1,6 @@
 ﻿using Godot;
 using Rc.Data.Model;
 using Rc.Data.Database;
-using Rc.Application.Game.Section;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,11 +15,7 @@ namespace Rc.Application
         // Fields
         // --------------------------------------------------
 
-        //private static SceneHandler _sceneHandler;
-        private static Node _mainNode;
-
-        private static Godot.Object _game;
-        private static Godot.Object _editor;
+        private static MainScene _mainScene;
 
         private static Boolean _isRunningApplication;
         private static Boolean _isRunningGame;
@@ -31,14 +26,11 @@ namespace Rc.Application
         // --------------------------------------------------
 
         /// <summary>
-        /// Gets the main node (init node)
+        /// Gets the main scene
         /// </summary>
-        public static Node MainNode
+        public static MainScene MainScene
         {
-            get
-            {
-                return _mainNode;
-            }
+            get { return _mainScene; }
         }
 
         /// <summary>
@@ -46,10 +38,7 @@ namespace Rc.Application
         /// </summary>
         public static Boolean IsRunningApplication
         {
-            get
-            {
-                return _isRunningApplication;
-            }
+            get { return _isRunningApplication; }
         }
 
         /// <summary>
@@ -57,10 +46,7 @@ namespace Rc.Application
         /// </summary>
         public static Boolean IsRunningGame
         {
-            get
-            {
-                return _isRunningGame;
-            }
+            get { return _isRunningGame; }
         }
 
         /// <summary>
@@ -68,10 +54,7 @@ namespace Rc.Application
         /// </summary>
         public static Boolean IsRunningEditor
         {
-            get
-            {
-                return _isRunningEditor;
-            }
+            get { return _isRunningEditor; }
         }
 
         // --------------------------------------------------
@@ -81,7 +64,7 @@ namespace Rc.Application
         /// <summary>
         /// Runs application with an initial node.
         /// </summary>
-        public static void Run(Node mainNode)
+        public static void Run(MainScene mainScene)
         {
             // Make sure application is not initialized
             if (IsRunningApplication)
@@ -89,13 +72,14 @@ namespace Rc.Application
                 // ERROR
                 return;
             }
+                      
 
             _isRunningApplication = true;
 
             // Apply changes to SceneTree
 
-            _mainNode = mainNode;
-            MainNode.GetTree().SetAutoAcceptQuit(false); // Allows handle quit requests
+            _mainScene = mainScene;
+            MainScene.GetTree().SetAutoAcceptQuit(false); // Allows handle quit requests
 
             // Instance SceneLoader
 
@@ -105,16 +89,10 @@ namespace Rc.Application
 
             // Initialize and test database}
 
-            Question q = new Question();
-            q.Caption = "NADIE PASA DE ESTA ESQUINA, AQUI MANDAN LAS DIVINAS";
 
-            QuestionInitializer qi = new QuestionInitializer(q, ResourceLoader.Load("res://Content/Scene/Node2D.tscn") as PackedScene);
-            
-
-            MainNode.AddChild(qi.InitNode());
-
+            GD.print("Iniciando escena principal!");
         }
-
+                
         public static void RunGame()
         {
             if (IsRunningGame)
@@ -149,7 +127,36 @@ namespace Rc.Application
 
         public static void Reset()
         {
+            if (IsRunningGame)
+            {
+                // Verify game state
+                
 
+            }
+
+            if (IsRunningEditor)
+            {
+                // Verify editor state
+
+            }
+
+           
+            Viewport root = MainScene.GetTree().GetRoot();
+            GD.print(root.GetName());
+
+            // Load new main scene.
+            PackedScene ps = (PackedScene)ResourceLoader.Load("res://Content/Scene/Main.tscn") ;
+            Node n = ps.Instance();
+
+
+            _isRunningApplication = false;
+            root.AddChild(n);
+
+            GD.print(root.GetChildCount());
+           
+
+            // Init main script again.
+            //root.AddChild(newMainScene);
         }
 
         public static void QuitRequest()
@@ -172,7 +179,7 @@ namespace Rc.Application
                 //    return;
             }
          
-            MainNode.GetTree().Quit();
+            MainScene.GetTree().Quit();
         }
 
     }

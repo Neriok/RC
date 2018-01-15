@@ -4,43 +4,39 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Runtime.CompilerServices;
 
-[assembly: InternalsVisibleTo("QuestionSceneController")]
-namespace Rc.Application.Game
+namespace Rc.Application
 {
-    public class QuestionScene : Node2D, IControllableScene
+    public abstract class SceneController : IScene
     {
         // --------------------------------------------------
         // Fields
         // --------------------------------------------------
 
-        internal SceneController _controller;     
+        protected Node _scene;
 
         // --------------------------------------------------
-        // Node2D
+        // Properties
         // --------------------------------------------------
 
-        public override void _Ready()
+        public Node Scene
         {
-            
+            get { return _scene; }
         }
 
         // --------------------------------------------------
-        // ISceneNode
+        // Constructors
         // --------------------------------------------------
 
-        public SceneController SceneController
+        public SceneController(Node scene)
         {
-            get
-            {
-                return _controller;
-            }
+            _scene = scene;
         }
 
+        // --------------------------------------------------
+        // Methods [Abstract]
+        // --------------------------------------------------
+
+        public abstract Node InitScene();
     }
 }
-
-
-
-

@@ -1,45 +1,35 @@
 ﻿using Godot;
 using Rc.Data.Model;
-using Rc.Application.Scene;
-using Rc.Application.Controller;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Runtime.CompilerServices;
 
 namespace Rc.Application.Game
 {    
-    public class QuestionSceneController : ISceneController
+    public class QuestionSceneController : SceneController
     {
         // --------------------------------------------------
         // Fields
         // --------------------------------------------------
 
         private Question _question;
-        private QuestionScene _scene;
         
         // --------------------------------------------------
         // Constructors
         // --------------------------------------------------
 
-        public QuestionSceneController(Question question, PackedScene scene)
-            : this(question, scene.Instance() as QuestionScene)
+        public QuestionSceneController(PackedScene scene, Question question)
+            : this(scene.Instance() as QuestionScene, question)
         {            
-        }
+        } 
 
-        public QuestionSceneController(Question question, QuestionScene scene)
-        {
-           if(scene == null)
-            {
-                // ERROR
-            }
-
-            _scene = scene;
-            _scene._controller = this;
+        public QuestionSceneController(QuestionScene scene, Question question)
+            : base(scene)
+        {                   
+            scene._controller = this;
             _question = question;
-
         }
 
         // --------------------------------------------------
@@ -49,19 +39,10 @@ namespace Rc.Application.Game
 
 
         // --------------------------------------------------
-        // ISceneController
+        // SceneController
         // --------------------------------------------------
         
-        public Node Scene
-        {
-            get
-            {
-                return _scene;
-            }
-        }
-
-
-        public Node InitScene(NodePath path = null)
+        public override Node InitScene()
         {
             return Scene;
         }

@@ -54,14 +54,14 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Content\Script\Application\Application.cs" />
-    <Compile Include="Content\Script\Application\Controller\ISceneController.cs" />
+    <Compile Include="Content\Script\Application\IScene.cs" />
     <Compile Include="Content\Script\Application\Game\QuestionSceneController.cs" />
     <Compile Include="Content\Script\Application\Game\QuestionScene.cs" />
-    <Compile Include="Content\Script\Application\Game\Section\QuestionInitializer.cs" />
-    <Compile Include="Content\Script\Application\Game\Section\SectionInitializer.cs" />
+    <Compile Include="Content\Script\Application\MainScene.cs" />
+    <Compile Include="Content\Script\Application\MainSceneController.cs" />
+    <Compile Include="Content\Script\Application\SceneController.cs" />
     <Compile Include="Content\Script\Application\SceneLoader.cs" />
-    <Compile Include="Content\Script\Application\Scene\ISceneNode.cs" />
-    <Compile Include="Content\Script\Application\Test.cs" />
+    <Compile Include="Content\Script\Application\IControllableScene.cs" />
     <Compile Include="Content\Script\Data\Model\Category.cs" />
     <Compile Include="Content\Script\Data\Database\InsertCommand.cs" />
     <Compile Include="Content\Script\Data\Database\RcDatabase.cs" />
@@ -75,6 +75,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\Script\Application\Editor\init.txt" />
+    <Content Include="Content\Script\Architecture.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\Script\Application\Game\History\" />

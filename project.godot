@@ -11,12 +11,8 @@ config_version=3
 [application]
 
 config/name="RC"
-run/main_scene="res://Content/Scene/Main2.tscn"
-boot_splash/image="res://Content/Image/2fd14a5b30468459812081111083710a.png"
-
-[display]
-
-window/size/resizable=false
+run/main_scene="res://Content/Scene/Main.tscn"
+config/icon="res://icon.png"
 
 [gdnative]
 
@@ -24,4 +20,4 @@ singletons=[  ]
 
 [rendering]
 
-environment/default_clear_color=Color( 0.104004, 0.120964, 0.1875, 1 )
+environment/default_clear_color=Color( 0.101563, 0.101563, 0.101563, 1 )

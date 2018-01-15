@@ -1,4 +1,90 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Comment CommentText="Rc.Data.Model">
+    <Position X="0.5" Y="0.5" Height="0.333" Width="2.054" />
+  </Comment>
+  <Class Name="Rc.Application.Game.QuestionScene" Collapsed="true">
+    <Position X="6.25" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAEAAAAA=</HashCode>
+      <FileName>Content\Script\Application\Game\QuestionScene.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.19" />
+  </Class>
+  <Class Name="Rc.Application.Game.QuestionSceneController" Collapsed="true">
+    <Position X="1" Y="6.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAABAgAAAAAAAAAAAAAAAAAIAAAAAAAA=</HashCode>
+      <FileName>Content\Script\Application\Game\QuestionSceneController.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Rc.Data.Model.DbObject" Collapsed="true">
+    <Position X="3.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Content\Script\Data\Model\DbObject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Rc.Data.Model.Question" Collapsed="true">
+    <Position X="1.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAAEAAAAgAqAAAAACAAAAABACAAAAAAAwDE=</HashCode>
+      <FileName>Content\Script\Data\Model\Question.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Rc.Data.Model.Tournament" Collapsed="true">
+    <Position X="3" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABACAAAAAAAAAAAgAIAAAQAAAAAEBAAAAAAAAIAAAA=</HashCode>
+      <FileName>Content\Script\Data\Model\Tournament.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Rc.Data.Model.Team" Collapsed="true">
+    <Position X="4.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAQAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>Content\Script\Data\Model\Team.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="Rc.Data.Model.Category" Collapsed="true">
+    <Position X="6.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAgAAAAAQAAAAAABAEAAAAgAAAAAA=</HashCode>
+      <FileName>Content\Script\Data\Model\Category.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Interface Name="Rc.Application.Controller.ISceneController" Collapsed="true">
+    <Position X="1" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAIAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Content\Script\Application\Controller\ISceneController.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Interface Name="Rc.Application.Scene.ISceneNode">
+    <Position X="4.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAA=</HashCode>
+      <FileName>Content\Script\Application\Scene\ISceneNode.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="Rc.Data.Model.QuestionType" Collapsed="true">
+    <Position X="0.5" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAIABAAAAAAAAAAAAg=</HashCode>
+      <FileName>Content\Script\Data\Model\Question.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="Rc.Data.Model.CorrectAnswer" Collapsed="true">
+    <Position X="0.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAApAEAAAA=</HashCode>
+      <FileName>Content\Script\Data\Model\Question.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
