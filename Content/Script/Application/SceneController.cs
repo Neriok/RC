@@ -34,7 +34,7 @@ namespace Rc.Application
         }
 
         // --------------------------------------------------
-        // Methods [Abstract]
+        // Methods
         // --------------------------------------------------
 
         public abstract Node InitScene();

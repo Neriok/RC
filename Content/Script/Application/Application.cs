@@ -80,13 +80,13 @@ namespace Rc.Application
             _mainScene = mainScene;
             _mainScene.GetTree().SetAutoAcceptQuit(false); // Allows handle quit requests
 
-            // Instance SceneLoader
-
             // Setup system message handler (popup)
 
             // ...
 
-            // Initialize and test database            
+            // Initialize and test database    
+
+           
         }
                 
         public static void RunGame()
@@ -156,7 +156,7 @@ namespace Rc.Application
                 //if (Editor.QuitRequest())
                 //    return;
             }
-         
+            
             _mainScene.GetTree().Quit();
         }
 
