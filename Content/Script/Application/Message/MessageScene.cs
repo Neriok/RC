@@ -7,37 +7,32 @@ using System.Threading.Tasks;
 using System.Runtime.CompilerServices;
 
 [assembly: InternalsVisibleTo("QuestionSceneController")]
-namespace Rc.Application.Game
+namespace Rc.Application.Message
 {
-    public class QuestionScene : Node2D, IControllableScene
+    public class MessageScene : Node, IControllableScene
     {
         // --------------------------------------------------
         // Fields
         // --------------------------------------------------
 
-        internal SceneController _controller;     
+        internal SceneController _controller;
 
         // --------------------------------------------------
-        // Node2D
+        // Node
         // --------------------------------------------------
 
         public override void _Ready()
         {
-            
+
         }
 
         // --------------------------------------------------
-        // ISceneNode
+        // ISControllableScene
         // --------------------------------------------------
 
         public SceneController SceneController
         {
             get { return _controller; }
         }
-
     }
 }
-
-
-
-

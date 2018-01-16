@@ -71,7 +71,7 @@ namespace Rc.Application
             {
                 // ERROR
                 return;
-            }                      
+            }                   
 
             _isRunningApplication = true;
 
@@ -85,7 +85,7 @@ namespace Rc.Application
             // ...
 
             // Initialize and test database    
-
+         
            
         }
                 

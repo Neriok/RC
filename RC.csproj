@@ -58,9 +58,7 @@
     <Compile Include="Content\Script\Application\Game\QuestionSceneController.cs" />
     <Compile Include="Content\Script\Application\Game\QuestionScene.cs" />
     <Compile Include="Content\Script\Application\MainScene.cs" />
-    <Compile Include="Content\Script\Application\MainSceneController.cs" />
     <Compile Include="Content\Script\Application\SceneController.cs" />
-    <Compile Include="Content\Script\Application\SceneLoader.cs" />
     <Compile Include="Content\Script\Application\IControllableScene.cs" />
     <Compile Include="Content\Script\Data\Model\Category.cs" />
     <Compile Include="Content\Script\Data\Database\InsertCommand.cs" />
