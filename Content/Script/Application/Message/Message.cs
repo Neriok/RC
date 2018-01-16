@@ -12,21 +12,31 @@ namespace Rc.Application.Message
         // Methods
         // --------------------------------------------------
 
+        public static MessageResult Show(String text)
+        {
+            return Show(text, String.Empty, MessageButtons.Accept, MessageIcon.None, MessageDefaultButton.Button1);
+        }  
+
+        public static MessageResult Show(String text, String caption)
+        {
+            return Show(text, caption, MessageButtons.Accept, MessageIcon.None, MessageDefaultButton.Button1);            
+        }
+
+        public static MessageResult Show(String text, String caption, MessageButtons messageButtons)
+        {
+            return Show(text, caption, messageButtons, MessageIcon.None, MessageDefaultButton.Button1);            
+        }        
+ 
+        public static MessageResult Show(String text, String caption, MessageButtons messageButtons
+                                         MessageIcon mssageIcon)
+        {
+            return Show(text, caption, messageButtons, messageIcon, MessageDefaultButton.Button1);            
+        } 
+
         public static MessageResult Show(String text, String caption, MessageButtons messageButtons, 
                                          MessageIcon messageIcon, MessageDefaultButton messageDefaultButton)
         {
-            return ShowInternal(text, caption, messageButtons, messageIcon, messageDefaultButton);
-        }
-        
-        public static MessageResult Show(String text)
-        {
-            return ShowInternal(text, String.Empty, MessageButtons.Accept, MessageIcon.None, MessageDefaultButton.Button1);
-        }
-
-        private static MessageResult ShowInternal(String text, String caption, MessageButtons messageButtons,
-                                                  MessageIcon messageIcon, MessageDefaultButton messageDefaultButton)
-        {
-            return MessageResult.Accept;
-        }
+            return MessageResult.Accept;            
+        }   
     }
 }
