@@ -4,14 +4,6 @@ importer="texture"
 type="StreamTexture"
 path="res://.import/Feedbin-Icon-error.svg.png-d7cf87eadc3f81a10b776d85a05013c1.stex"
 
-[deps]
-
-source_file="res://Content/Image/Feedbin-Icon-error.svg.png"
-source_md5="334aaca97ac0f606e8597c995ce9b7f0"
-
-dest_files=[ "res://.import/Feedbin-Icon-error.svg.png-d7cf87eadc3f81a10b776d85a05013c1.stex" ]
-dest_md5="e03bf20d6caa99977b9800bb74e8cab6"
-
 [params]
 
 compress/mode=0
