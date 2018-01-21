@@ -5,7 +5,7 @@ namespace Rc.Data.Model
     /// <summary>
     /// Represents a team data object at runtime. 
     /// </summary>
-    public class Team : DbObject, IEquatable<Team>
+    public class Team : Object, IEquatable<Team>
     {
         // --------------------------------------------------
         // Properties

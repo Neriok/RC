@@ -26,7 +26,7 @@ namespace Rc.Data.Model
     /// <summary>
     /// Represents a question data object at runtime. 
     /// </summary>
-    public class Question : DbObject, IEquatable<Question>, ICloneable
+    public class Question : Object, IEquatable<Question>, ICloneable
     {
         // --------------------------------------------------
         // Fields
@@ -79,7 +79,7 @@ namespace Rc.Data.Model
         public CorrectAnswer CorrectAnswer { get; set; }
 
         /// <summary>
-        /// Gets or sets the learning of the question.
+        /// Gets or sets the question's learning.
         /// </summary>
         public String Learning { get; set; }
 
@@ -120,7 +120,7 @@ namespace Rc.Data.Model
         // ICloneable
         // --------------------------------------------------
 
-        public Object Clone()
+        public System.Object Clone()
         {
             return (Question)MemberwiseClone();
         }

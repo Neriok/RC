@@ -7,7 +7,7 @@ namespace Rc.Data.Model
     /// <summary>
     /// Represents a category data object at runtime. 
     /// </summary>
-    public class Category : DbObject, IEquatable<Category>
+    public class Category : Object, IEquatable<Category>
     {
         // --------------------------------------------------
         // Properties

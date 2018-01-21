@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Rc.Application.Message
+namespace Rc.App
 {
     public enum MessageIcon
     {

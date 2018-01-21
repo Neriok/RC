@@ -5,43 +5,64 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Rc.Application.Message
+namespace Rc.App.Menu.Scene
 {
-    public class MessageSceneController : SceneController
+    public class MenuSceneController : SceneController
     {
         // --------------------------------------------------
         // Fields
         // --------------------------------------------------
 
-        private MessageSettings _settings;
+        private SettingSceneController _settingsSceneController;
 
         // --------------------------------------------------
         // Constructors
         // --------------------------------------------------
 
-        public MessageSceneController(PackedScene scene, MessageSettings settings)
-            : this(scene.Instance() as MessageScene, settings)
-        {
-        }
-
-        public MessageSceneController(MessageScene scene, MessageSettings settings)
+        public MenuSceneController(MenuScene scene)
             : base(scene)
         {
             scene._controller = this;
-            _settings = settings;
+        }
+
+        // --------------------------------------------------
+        // Methods
+        // --------------------------------------------------
+
+        public void ShowSettings()
+        {
+
         }
 
         // --------------------------------------------------
         // Signals
         // --------------------------------------------------
+        
+        public void OnGameButtonDown()
+        {
 
+        }
 
+        public void OnEditorButtonDown()
+        {
+
+        }
+
+        public void OnSettingsButtonDonw()
+        {
+
+        }
+
+        public void OnExitButtonDown()
+        {
+            Application.QuitRequest();
+        }
 
         // --------------------------------------------------
         // SceneController
         // --------------------------------------------------
 
-        public override Node InitScene()
+        public override Node InitScene(NodePath path = null)
         {
             return Scene;
         }

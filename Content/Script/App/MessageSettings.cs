@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Rc.Application.Message
+namespace Rc.App
 {
     public struct MessageSettings
     {
@@ -17,5 +17,6 @@ namespace Rc.Application.Message
         public MessageIcon MessageIcon { get; set; }        
 
         public MessageDefaultButton MessageDefaultButton { get; set; }
+
     }
 }

@@ -6,17 +6,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.CompilerServices;
 
-[assembly: InternalsVisibleTo("QuestionSceneController")]
-namespace Rc.Application.Game
+namespace Rc.App.Game.Scene
 {
     public class QuestionScene : Node2D, IControllableScene
     {
-        // --------------------------------------------------
-        // Fields
-        // --------------------------------------------------
-
-        internal SceneController _controller;     
-
         // --------------------------------------------------
         // Node2D
         // --------------------------------------------------
@@ -30,10 +23,7 @@ namespace Rc.Application.Game
         // ISceneNode
         // --------------------------------------------------
 
-        public SceneController SceneController
-        {
-            get { return _controller; }
-        }
+        public SceneController SceneController { get; set; }
 
     }
 }

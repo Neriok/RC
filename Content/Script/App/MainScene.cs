@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Rc.Application
+namespace Rc.App
 {
     public class MainScene : Node
     {

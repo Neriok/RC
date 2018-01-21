@@ -6,30 +6,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Rc.Application.Game
+namespace Rc.App.Game.Scene
 {    
-    public class QuestionSceneController : SceneController
-    {
-        // --------------------------------------------------
-        // Fields
-        // --------------------------------------------------
-
-        private Question _question;
-        
+    public class QuestionSceneController : SceneController<Question>
+    {        
         // --------------------------------------------------
         // Constructors
-        // --------------------------------------------------
-
-        public QuestionSceneController(PackedScene scene, Question question)
-            : this(scene.Instance() as QuestionScene, question)
-        {            
-        } 
+        // --------------------------------------------------        
 
         public QuestionSceneController(QuestionScene scene, Question question)
-            : base(scene)
+            : base(scene, question)
         {                   
-            scene._controller = this;
-            _question = question;
+            scene.SceneController = this;
         }
 
         // --------------------------------------------------
@@ -42,9 +30,18 @@ namespace Rc.Application.Game
         // SceneController
         // --------------------------------------------------
         
-        public override Node InitScene()
+        public override Node InitScene(NodePath path = null)
         {
             return Scene;
+        }
+
+        // --------------------------------------------------
+        // SceneController <Question>
+        // --------------------------------------------------
+
+        public override void BindData(Question data)
+        {
+            throw new NotImplementedException();
         }
     }
 }

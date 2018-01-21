@@ -1,4 +1,5 @@
 ﻿using Godot;
+using Rc.App;
 using Rc.Data.Model;
 using Rc.Data.Database;
 using System;
@@ -6,8 +7,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Reflection;
 
-namespace Rc.Application
+namespace Rc.App 
 {
     public static class Application
     {
@@ -16,6 +18,10 @@ namespace Rc.Application
         // --------------------------------------------------
 
         private static MainScene _mainScene;
+        private static Settings _settings;
+
+        //private static GameHandler _gameManager;
+        //private static EditorHandler _editorManager;
 
         private static Boolean _isRunningApplication;
         private static Boolean _isRunningGame;
@@ -26,11 +32,19 @@ namespace Rc.Application
         // --------------------------------------------------
 
         /// <summary>
-        /// Gets the main scene
+        /// Gets the main scene.
         /// </summary>
         public static MainScene MainScene
         {
             get { return _mainScene; }
+        }
+
+        /// <summary>
+        /// Gets the app settings. 
+        /// </summary>
+        public static Settings Settings
+        {
+            get { return _settings; }
         }
 
         /// <summary>
@@ -80,15 +94,30 @@ namespace Rc.Application
             _mainScene = mainScene;
             _mainScene.GetTree().SetAutoAcceptQuit(false); // Allows handle quit requests
 
-            // Setup system message handler (popup)
-
-            // ...
-
-            // Initialize and test database    
-         
-           
+            //Message.Message.Show("This message will autodestroy in 3... 2... 1... BUMM!", "SISTEMA",
+            //    MessageButtons.Accept, MessageIcon.Warning, MessageDefaultButton.Button1);           
         }
-                
+
+        /// <summary>
+        /// Runs message main loop.
+        /// </summary>
+        public static void RunMessage(MessageSceneController controller)
+        {
+            // BeginMessageMainLoop
+            
+            //MessageMainLoop(controller);
+
+            // EndMessageMainLoop
+        }
+
+        private static void MessageMainLoop(MessageSceneController controller)
+        {
+            while (!controller.HasResult())
+            {
+
+            }
+        }
+
         public static void RunGame()
         {
             if (IsRunningGame)

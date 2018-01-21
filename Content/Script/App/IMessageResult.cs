@@ -4,12 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Rc.Application.Message
+namespace Rc.App
 {
-    public enum MessageDefaultButton
+    public interface IMessageResult
     {
-        Button1 = 0,
-        Button2 = 1,
-        Button3 = 2
+        void SetResult(MessageResult messageResult);
+
+        Boolean HasResult();
     }
 }

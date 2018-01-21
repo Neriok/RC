@@ -53,13 +53,21 @@
     <Reference Include="System.Drawing" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Content\Script\Application\Application.cs" />
-    <Compile Include="Content\Script\Application\IScene.cs" />
-    <Compile Include="Content\Script\Application\Game\QuestionSceneController.cs" />
-    <Compile Include="Content\Script\Application\Game\QuestionScene.cs" />
-    <Compile Include="Content\Script\Application\MainScene.cs" />
-    <Compile Include="Content\Script\Application\SceneController.cs" />
-    <Compile Include="Content\Script\Application\IControllableScene.cs" />
+    <Compile Include="Content\Script\App\Application.cs" />
+    <Compile Include="Content\Script\App\Game\Scene\QuestionScene.cs" />
+    <Compile Include="Content\Script\App\Game\Scene\QuestionSceneController.cs" />
+    <Compile Include="Content\Script\App\IScene.cs" />
+    <Compile Include="Content\Script\App\MainScene.cs" />
+    <Compile Include="Content\Script\App\Message.cs" />
+    <Compile Include="Content\Script\App\MessageButtons.cs" />
+    <Compile Include="Content\Script\App\MessageDefaultButton.cs" />
+    <Compile Include="Content\Script\App\MessageIcon.cs" />
+    <Compile Include="Content\Script\App\MessageResult.cs" />
+    <Compile Include="Content\Script\App\MessageScene.cs" />
+    <Compile Include="Content\Script\App\MessageSceneController.cs" />
+    <Compile Include="Content\Script\App\MessageSettings.cs" />
+    <Compile Include="Content\Script\App\SceneController.cs" />
+    <Compile Include="Content\Script\App\IControllableScene.cs" />
     <Compile Include="Content\Script\Data\Model\Category.cs" />
     <Compile Include="Content\Script\Data\Database\InsertCommand.cs" />
     <Compile Include="Content\Script\Data\Database\RcDatabase.cs" />
@@ -72,17 +80,21 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Content\Script\Application\Editor\init.txt" />
-    <Content Include="Content\Script\Architecture.txt" />
+    <Content Include="Content\Database\Default.sql" />
+    <Content Include="Content\Script\App\Editor\init.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Content\Script\Application\Game\History\" />
-    <Folder Include="Content\Script\Application\Menu\" />
-    <Folder Include="Content\Script\Debug\" />
-    <Folder Include="Content\Script\Repository\" />
-    <Folder Include="Content\Script\Util\" />
+    <Folder Include="Content\Scene\Editor\" />
+    <Folder Include="Content\Scene\Game\" />
+    <Folder Include="Content\Scene\Menu\" />
+    <Folder Include="Content\Script\App\Editor\Scene\" />
+    <Folder Include="Content\Script\App\Game\History\" />
+    <Folder Include="Content\Script\App\Menu\Scene\" />
+    <Folder Include="Content\Shader\" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Content\Scene\Main.tscn" />
+    <None Include="Content\Scene\Message.tscn" />
     <None Include="Content\Script\ClassDiagram.cd" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />

@@ -6,7 +6,7 @@ namespace Rc.Data.Model
     /// <summary>
     /// Represents a tournament data object at runtime. 
     /// </summary>
-    public class Tournament : DbObject, IEquatable<Tournament>
+    public class Tournament : Object, IEquatable<Tournament>
     {
         // --------------------------------------------------
         // Fields

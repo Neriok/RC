@@ -1,6 +1,6 @@
 ﻿using Godot;
 
-namespace Rc.Application
+namespace Rc.App
 {
     public interface IScene
     {

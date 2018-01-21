@@ -5,13 +5,11 @@ namespace Rc.Data.Model
     /// <summary>
     /// Base class for database entities.
     /// </summary>
-    public class DbObject
+    public class Object
     {
-        public const string NONE = "none";
-
                 /// <summary>
         /// Gets or sets the database id.
         /// </summary>
-        public Guid Id { get; set; } = Guid.NewGuid();
+        public Int64 Id { get; set; }
     }
 }
